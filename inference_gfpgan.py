@@ -52,7 +52,7 @@ def main():
     if os.path.isfile(args.input):
         img_list = [args.input]
     else:
-        img_list = sorted([os.path.join(in_folder, f) for f in os.listdir(in_folder) if os.path.isfile(os.path.join(in_folder, f))])
+        img_list = sorted([os.path.join(args.input, f) for f in os.listdir(args.input) if os.path.isfile(os.path.join(args.input, f))])
 
 
     os.makedirs(args.output, exist_ok=True)
